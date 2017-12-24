@@ -19,6 +19,21 @@ def filled(puzzle):
 def firstUnused(puzzle):
     '''Returns the [row, col] of the topmost-leftmost 0 in puzzle'''
     for i, row in enumerate(puzzle):
-        zeroAt = e.index(0)
+        zeroAt = row.index(0)
         if zeroAt > -1:
             return [i, zeroAt]
+
+def addNum(puzzle):
+    '''Returns a list of puzzles with the firstUnused(puzzle) replaced with
+    1 through 9
+    '''
+    unused = firstUnused(puzzle)
+    row = unused[0]
+    col = unused[1]
+    res = []
+    for i in range(1, 10):
+        r = [puzzle[j][:] for j in range(len(puzzle))]
+        r[row][col] = i
+        res.append(r)
+    return res
+    
