@@ -32,8 +32,18 @@ def addNum(puzzle):
     col = unused[1]
     res = []
     for i in range(1, 10):
+        valid = True
+        for j in puzzle[row]:
+            if j == i:
+                valid = False
+                continue
+        if not valid: continue
+        for j in range(len(puzzle)):
+            if puzzle[j][col] == i:
+                valid = False
+                continue
+        if not valid: continue
         r = [puzzle[j][:] for j in range(len(puzzle))]
         r[row][col] = i
         res.append(r)
     return res
-    
