@@ -25,21 +25,18 @@ def firstUnused(puzzle):
 
 def addNum(puzzle):
     '''Returns a list of puzzles with the firstUnused(puzzle) replaced with
-    1 through 9
+    1 <= i <= 9, if i is valid in that position
     '''
     unused = firstUnused(puzzle)
     row = unused[0]
     col = unused[1]
+    puzzRow = puzzle[row]
+    puzzLen = len(puzzle)
     res = []
     for i in range(1, 10):
         valid = True
-        for j in puzzle[row]:
-            if j == i:
-                valid = False
-                continue
-        if not valid: continue
-        for j in range(len(puzzle)):
-            if puzzle[j][col] == i:
+        for j in range(puzzLen):
+            if puzzRow[j] == i or puzzle[j][col] == i:
                 valid = False
                 continue
         if not valid: continue
