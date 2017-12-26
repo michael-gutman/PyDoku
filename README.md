@@ -3,8 +3,8 @@ A simple python project to solve 9x9 sudoku puzzles using backtracking.
 Simple, although not very efficient.
 
 TODO:
-- Find 'Neighbours'
-- Validate 'Neighbours'
+- ~~Find 'Neighbours'~~
+- ~~Validate 'Neighbours'~~
 - Search for Solution
 
 TODO - Enhancements:
