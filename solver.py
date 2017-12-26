@@ -67,6 +67,8 @@ def addNum(puzzle):
                 valid = False
                 continue
         if not valid: continue
+        valid = checkSquare(i, row, col, puzzle)
+        if not valid: continue
         r = [puzzle[j][:] for j in range(len(puzzle))]
         r[row][col] = i
         res.append(r)
