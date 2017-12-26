@@ -73,3 +73,25 @@ def addNum(puzzle):
         r[row][col] = i
         res.append(r)
     return res
+
+def solveFromList(puzzles):
+    '''Produces the solution for one of the puzzles or False'''
+    if puzzles == []:
+        return False
+    else:
+        print(puzzles[0])
+        cur = solve(puzzles[0])
+        while not cur:
+            if puzzles == []:
+                return False
+            cur = solve(puzzles[0])
+            puzzles = puzzles[1:]
+        return cur
+
+def solve(puzzle):
+    '''Produces the solved puzzle or False'''
+    if filled(puzzle):
+        return puzzle
+    else: return solveFromList(addNum(puzzle))
+
+solve(examplePuzz)

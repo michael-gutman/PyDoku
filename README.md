@@ -5,7 +5,8 @@ Simple, although not very efficient.
 TODO:
 - ~~Find 'Neighbours'~~
 - ~~Validate 'Neighbours'~~
-- Search for Solution
+- ~~Search for Solution~~
+- Make faster
 
 TODO - Enhancements:
 - Find a good way to get puzzles as input/build puzzles
