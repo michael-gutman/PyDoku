@@ -19,9 +19,36 @@ def filled(puzzle):
 def firstUnused(puzzle):
     '''Returns the [row, col] of the topmost-leftmost 0 in puzzle'''
     for i, row in enumerate(puzzle):
-        zeroAt = row.index(0)
-        if zeroAt > -1:
+        if 0 in row:
+            zeroAt = row.index(0)
             return [i, zeroAt]
+
+def checkSquare(num, row, col, puzzle):
+    '''Determines if num is valid at puzzle[row][col] based on
+    the 3x3 box it resides in
+    '''
+    yPos = row % 3
+    xPos = col % 3
+
+    if yPos == 0:
+        yRange = range(row, row+3)
+    elif yPos == 1:
+        yRange = range(row-1, row+2)
+    elif yPos == 2:
+        yRange = range(row-2, row+1)
+
+    if xPos == 0:
+        xRange = range(col, col+3)
+    elif xPos == 1:
+        xRange = range(col-1, col+2)
+    elif xPos == 2:
+        xRange = range(col-2, col+1)
+
+    for i in yRange:
+        for j in xRange:
+            if puzzle[i][j] == num:
+                return False
+    return True
 
 def addNum(puzzle):
     '''Returns a list of puzzles with the firstUnused(puzzle) replaced with
