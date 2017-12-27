@@ -6,7 +6,7 @@ TODO:
 - ~~Find 'Neighbours'~~
 - ~~Validate 'Neighbours'~~
 - ~~Search for Solution~~
-- Make faster
+- ~~Make faster~~ (sort of)
 
 TODO - Enhancements:
 - Find a good way to get puzzles as input/build puzzles

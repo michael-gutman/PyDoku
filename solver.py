@@ -79,13 +79,12 @@ def solveFromList(puzzles):
     if puzzles == []:
         return False
     else:
-        print(puzzles[0])
+        #print(puzzles[0])
         cur = solve(puzzles[0])
-        while not cur:
+        if not cur:
             if puzzles == []:
                 return False
-            cur = solve(puzzles[0])
-            puzzles = puzzles[1:]
+            else: return solveFromList(puzzles[1:])
         return cur
 
 def solve(puzzle):
@@ -94,4 +93,4 @@ def solve(puzzle):
         return puzzle
     else: return solveFromList(addNum(puzzle))
 
-solve(examplePuzz)
+print(solve(examplePuzz))
