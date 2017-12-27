@@ -1,15 +1,12 @@
 # sudoku-solver
 A simple python project to solve 9x9 sudoku puzzles using backtracking.
-Simple, although not very efficient.
+Simple, although not the most efficient.
+# Usage
+requires python3.
+Simply clone the repo or download solver.py, then run!
 
-TODO:
-- ~~Find 'Neighbours'~~
-- ~~Validate 'Neighbours'~~
-- ~~Search for Solution~~
-- ~~Make faster~~ (sort of)
+# TODO
 
-TODO - Enhancements:
-- ~~Find a good way to get puzzles as input/build puzzles~~
 - Implement either GUI or web
 - Solving for other size puzzles
-- Use a more efficient algorithm
+- Use a more efficient algorithm(?)
