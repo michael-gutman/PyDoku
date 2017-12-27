@@ -9,7 +9,7 @@ TODO:
 - ~~Make faster~~ (sort of)
 
 TODO - Enhancements:
-- Find a good way to get puzzles as input/build puzzles
+- ~~Find a good way to get puzzles as input/build puzzles~~
 - Implement either GUI or web
 - Solving for other size puzzles
 - Use a more efficient algorithm
