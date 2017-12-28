@@ -44,14 +44,14 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="play_btn">
        <property name="text">
         <string>Play Sudoku</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="solve_btn">
        <property name="text">
         <string>Sudoku Solver</string>
        </property>

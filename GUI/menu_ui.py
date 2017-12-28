@@ -29,12 +29,12 @@ class Ui_Menu(object):
         self.label.setAlignment(QtCore.Qt.AlignCenter)
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
-        self.pushButton_2 = QtWidgets.QPushButton(Menu)
-        self.pushButton_2.setObjectName("pushButton_2")
-        self.verticalLayout.addWidget(self.pushButton_2)
-        self.pushButton = QtWidgets.QPushButton(Menu)
-        self.pushButton.setObjectName("pushButton")
-        self.verticalLayout.addWidget(self.pushButton)
+        self.play_btn = QtWidgets.QPushButton(Menu)
+        self.play_btn.setObjectName("play_btn")
+        self.verticalLayout.addWidget(self.play_btn)
+        self.solve_btn = QtWidgets.QPushButton(Menu)
+        self.solve_btn.setObjectName("solve_btn")
+        self.verticalLayout.addWidget(self.solve_btn)
         self.verticalLayout_2.addLayout(self.verticalLayout)
 
         self.retranslateUi(Menu)
@@ -44,6 +44,6 @@ class Ui_Menu(object):
         _translate = QtCore.QCoreApplication.translate
         Menu.setWindowTitle(_translate("Menu", "PyDoku"))
         self.label.setText(_translate("Menu", "PyDoku"))
-        self.pushButton_2.setText(_translate("Menu", "Play Sudoku"))
-        self.pushButton.setText(_translate("Menu", "Sudoku Solver"))
+        self.play_btn.setText(_translate("Menu", "Play Sudoku"))
+        self.solve_btn.setText(_translate("Menu", "Sudoku Solver"))
 
