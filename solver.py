@@ -91,19 +91,3 @@ def solve(puzzle):
     if filled(puzzle):
         return puzzle
     else: return solveFromList(addNum(puzzle))
-
-def main():
-    print("Use this tool to solve sudoku.")
-    print("Enter each line of the puzzle one at a time,")
-    print("Using 0 to denote empty squares.")
-    print("Any characters after the first 9 on each line will be ignored.")
-    puzzle = []
-    for i in range(9):
-        puzzle.append(list(map(int, list(input("Line %d: " %i))[:9])))
-    print("Your Puzzle is: ")
-    for i in range(9): print(puzzle[i])
-    print("The Solution is: ")
-    soln = solve(puzzle)
-    for i in range(9): print(soln[i])
-
-main()
