@@ -35,14 +35,25 @@
    </item>
    <item>
     <widget class="QTableWidget" name="tableWidget">
-     <property name="autoFillBackground">
-      <bool>false</bool>
+     <property name="font">
+      <font>
+       <family>Goudy Old Style</family>
+       <pointsize>15</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
      </property>
      <property name="sizeAdjustPolicy">
       <enum>QAbstractScrollArea::AdjustIgnored</enum>
      </property>
      <property name="editTriggers">
       <set>QAbstractItemView::AnyKeyPressed|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed|QAbstractItemView::SelectedClicked</set>
+     </property>
+     <property name="gridStyle">
+      <enum>Qt::SolidLine</enum>
      </property>
      <property name="cornerButtonEnabled">
       <bool>true</bool>
