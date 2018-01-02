@@ -49,6 +49,16 @@ def checkSquare(num, row, col, puzzle):
                 return False
     return True
 
+def checkRowCol(num, row, col, puzzle):
+    for j in range(9):
+        if puzzle[row][j] == num or puzzle[j][col] == num:
+            return False
+    return True
+
+def isValid(num, row, col, puzzle):
+    return (checkSquare(num, row, col, puzzle)
+            and checkRowCol(num, row, col, puzzle))
+
 def addNum(puzzle):
     '''Returns a list of puzzles with the firstUnused(puzzle) replaced with
     1 <= i <= 9, if i is valid in that position
@@ -56,18 +66,9 @@ def addNum(puzzle):
     unused = firstUnused(puzzle)
     row = unused[0]
     col = unused[1]
-    puzzRow = puzzle[row]
-    puzzLen = len(puzzle)
     res = []
     for i in range(1, 10):
-        valid = True
-        for j in range(puzzLen):
-            if puzzRow[j] == i or puzzle[j][col] == i:
-                valid = False
-                continue
-        if not valid: continue
-        valid = checkSquare(i, row, col, puzzle)
-        if not valid: continue
+        if not isValid(num, row, col, puzzle): continue
         r = [puzzle[j][:] for j in range(len(puzzle))]
         r[row][col] = i
         res.append(r)
