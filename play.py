@@ -2,6 +2,7 @@ from random import *
 from solver import *
 
 def genPuzzle():
+    '''Generates a valid sudoku board with random num of hints btwn 17 and 27'''
     board = [[0] * 9 for _ in range(9)]
     clues = randint(17,27)
     for _ in range(clues):
