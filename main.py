@@ -20,11 +20,11 @@ class Menu(QDialog, Ui_Menu):
     def openSolver(self):
         self.solver.show()
 
-def Play(QDialog, Ui_Play):
+class Play(QDialog, Ui_Play):
     def __init__(self, parent=None):
         super(Solver, self).__init__(parent)
         self.setupUi(self)
-        
+
 
 class Solver(QDialog, Ui_Solver):
     def __init__(self, parent=None):
