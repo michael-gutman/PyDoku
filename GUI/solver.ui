@@ -28,8 +28,18 @@
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QLabel" name="label">
+     <property name="styleSheet">
+      <string notr="true">QTableWidget::item { 
+border-left: 2px solid white; 
+border-top: 2px solid white; 
+} 
+QTableWidget{ 
+border-bottom: 2px solid white; 
+border-right: 2px solid white; 
+}</string>
+     </property>
      <property name="text">
-      <string>Enter the puzzle below, then hit 'Apply' to show solution.</string>
+      <string>Enter the puzzle below, then hit 'Solve' to show solution.</string>
      </property>
     </widget>
    </item>

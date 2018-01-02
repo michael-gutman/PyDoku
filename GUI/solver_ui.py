@@ -17,6 +17,14 @@ class Ui_Solver(object):
         self.verticalLayout = QtWidgets.QVBoxLayout(Solver)
         self.verticalLayout.setObjectName("verticalLayout")
         self.label = QtWidgets.QLabel(Solver)
+        self.label.setStyleSheet("QTableWidget::item { \n"
+"border-left: 2px solid white; \n"
+"border-top: 2px solid white; \n"
+"} \n"
+"QTableWidget{ \n"
+"border-bottom: 2px solid white; \n"
+"border-right: 2px solid white; \n"
+"}")
         self.label.setObjectName("label")
         self.verticalLayout.addWidget(self.label)
         self.tableWidget = QtWidgets.QTableWidget(Solver)
@@ -61,7 +69,7 @@ class Ui_Solver(object):
     def retranslateUi(self, Solver):
         _translate = QtCore.QCoreApplication.translate
         Solver.setWindowTitle(_translate("Solver", "PyDoku Solver"))
-        self.label.setText(_translate("Solver", "Enter the puzzle below, then hit \'Apply\' to show solution."))
+        self.label.setText(_translate("Solver", "Enter the puzzle below, then hit \'Solve\' to show solution."))
         self.cancel_btn.setText(_translate("Solver", "Cancel"))
         self.solve_btn.setText(_translate("Solver", "Solve"))
         self.reset_btn.setText(_translate("Solver", "Reset"))

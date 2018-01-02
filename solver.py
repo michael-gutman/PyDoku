@@ -68,7 +68,7 @@ def addNum(puzzle):
     col = unused[1]
     res = []
     for i in range(1, 10):
-        if not isValid(num, row, col, puzzle): continue
+        if not isValid(i, row, col, puzzle): continue
         r = [puzzle[j][:] for j in range(len(puzzle))]
         r[row][col] = i
         res.append(r)

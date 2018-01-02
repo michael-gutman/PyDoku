@@ -22,7 +22,7 @@ class Menu(QDialog, Ui_Menu):
 
 class Play(QDialog, Ui_Play):
     def __init__(self, parent=None):
-        super(Solver, self).__init__(parent)
+        super(Play, self).__init__(parent)
         self.setupUi(self)
 
 
