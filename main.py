@@ -2,17 +2,29 @@ import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QTableWidgetItem
 from GUI.menu_ui import Ui_Menu
 from GUI.solver_ui import Ui_Solver
+from GUI.play_ui import Ui_Play
 import solver
 
 class Menu(QDialog, Ui_Menu):
     def __init__(self, parent=None):
         super(Menu, self).__init__(parent)
         self.setupUi(self)
-        self.solve_btn.clicked.connect(self.openSolver)
+        self.play = Play(self)
+        self.play_btn.clicked.connect(self.openPlay)
         self.solver = Solver(self)
+        self.solve_btn.clicked.connect(self.openSolver)
+
+    def openPlay(self):
+        self.play.show()
 
     def openSolver(self):
         self.solver.show()
+
+def Play(QDialog, Ui_Play):
+    def __init__(self, parent=None):
+        super(Solver, self).__init__(parent)
+        self.setupUi(self)
+        
 
 class Solver(QDialog, Ui_Solver):
     def __init__(self, parent=None):
