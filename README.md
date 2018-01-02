@@ -1,4 +1,4 @@
-# sudoku-solver
+# PyDoku
 A simple python project to play or solve simple 9x9 Sudoku. Uses backtracking to solve puzzles. GUI created using Qt Designer and PyQt.
 
 # In Progress/TODO
