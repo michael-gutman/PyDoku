@@ -1,9 +1,8 @@
 # sudoku-solver
-A simple python project to solve 9x9 sudoku puzzles using backtracking.
-Simple, although not the most efficient.
+A simple python project to play or solve simple 9x9 Sudoku. Uses backtracking to solve puzzles. GUI created using Qt Designer and PyQt.
 
-# TODO
-
-- Implement either GUI or web
-- Solving for other size puzzles
-- Use a more efficient algorithm(?)
+# In Progress/TODO
+- Play functionality
+- Update Solver GUI
+- Add CLI mode
+- Consider a 'better' algorithm
