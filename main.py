@@ -1,9 +1,11 @@
 import sys
 from PyQt5.QtWidgets import QApplication, QDialog, QTableWidgetItem
+from PyQt5.QtCore import Qt
 from GUI.menu_ui import Ui_Menu
 from GUI.solver_ui import Ui_Solver
 from GUI.play_ui import Ui_Play
 import solver
+import play
 
 class Menu(QDialog, Ui_Menu):
     def __init__(self, parent=None):
@@ -24,7 +26,27 @@ class Play(QDialog, Ui_Play):
     def __init__(self, parent=None):
         super(Play, self).__init__(parent)
         self.setupUi(self)
+        self.squares = [[self.topleft, self.topmiddle, self.topright],
+                        [self.middleleft, self.middlemiddle, self.middleright],
+                        [self.bottomleft, self.bottommiddle, self.bottomright]]
+        self.newClick()
+        self.cancel_btn.clicked.connect(self.close)
+        self.new_btn.clicked.connect(self.newClick)
 
+    def newClick(self):
+        puzzle = play.genPuzzle()
+        for row in puzzle:
+            print(row)
+        for r, row in enumerate(self.squares):
+            for c, square in enumerate(row):
+                for i in range(3):
+                    for j in range(3):
+                        val = puzzle[i+r*3][j+c*3]
+                        if val != 0:
+                            item = QTableWidgetItem(str(val))
+                            item.setFlags(Qt.ItemIsSelectable
+                                        or Qt.ItemIsEnabled)
+                            square.setItem(i, j, item)
 
 class Solver(QDialog, Ui_Solver):
     def __init__(self, parent=None):
