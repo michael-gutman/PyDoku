@@ -35,8 +35,6 @@ class Play(QDialog, Ui_Play):
 
     def newClick(self):
         puzzle = play.genPuzzle()
-        for row in puzzle:
-            print(row)
         for r, row in enumerate(self.squares):
             for c, square in enumerate(row):
                 for i in range(3):
