@@ -44,7 +44,11 @@ class Play(QDialog, Ui_Play):
                             item = QTableWidgetItem(str(val))
                             item.setFlags(Qt.ItemIsSelectable
                                         or Qt.ItemIsEnabled)
-                            square.setItem(i, j, item)
+                        else:
+                            item = QTableWidgetItem("")
+                        square.setItem(i, j, item)
+                square.clearSelection()
+                        
 
 class Solver(QDialog, Ui_Solver):
     def __init__(self, parent=None):
